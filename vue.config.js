@@ -5,12 +5,20 @@ module.exports = {
     externals: ['com1'],
     output: {
       libraryTarget: 'system'
+    },
+    module: {
+      rules: [
+        {
+          parser: {
+            system: false
+          }
+        }
+      ]
     }
   },
   devServer: {
     host: 'localhost',
     port: '8080',
-    open: true,
     contentBase: path.resolve(__dirname, './'),
     headers: {
       'Access-Control-Allow-Origin': '*'
