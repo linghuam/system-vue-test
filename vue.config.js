@@ -5,6 +5,15 @@ module.exports = {
     externals: ['com1'],
     output: {
       libraryTarget: 'system'
+    },
+    module: {
+      rules: [
+        {
+          parser: {
+            system: false
+          }
+        }
+      ]
     }
   },
   devServer: {
