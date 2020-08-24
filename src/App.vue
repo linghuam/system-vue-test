@@ -10,9 +10,11 @@ export default {
 
   methods: {
     handleClick() {
+      var moduleName = "com1";
       // eslint-disable-next-line
-      System.import('com1').then(res => {
-        console.log('import success', res)
+      System.import(moduleName).then(res => {
+        console.log('import success', res);
+        res.default.initChart('', {});
       });
     }
   }

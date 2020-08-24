@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   configureWebpack: {
-    externals: ['com1'],
-    output: {
-      libraryTarget: 'system'
-    },
+    // externals: ['com1', 'lodash'],
+    // output: {
+    //   libraryTarget: 'system'
+    // },
     module: {
       rules: [
         {
@@ -18,7 +18,7 @@ module.exports = {
   },
   devServer: {
     host: 'localhost',
-    port: '8080',
+    port: '8089',
     open: true,
     contentBase: path.resolve(__dirname, './'),
     headers: {
