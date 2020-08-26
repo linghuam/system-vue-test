@@ -1,4 +1,4 @@
-System.register(["lodash"], function(__WEBPACK_DYNAMIC_EXPORT__) {
+System.register(["lodash@4.17.20"], function(__WEBPACK_DYNAMIC_EXPORT__) {
 	var __WEBPACK_EXTERNAL_MODULE_lodash__;
 	return {
 		setters: [
