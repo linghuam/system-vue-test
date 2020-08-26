@@ -1,6 +1,9 @@
 const path = require('path');
 
 module.exports = {
+  css: {
+    extract: false
+  },
   configureWebpack: {
     // externals: ['com1', 'lodash'],
     // output: {
