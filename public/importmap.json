@@ -1,7 +1,7 @@
 {
   "imports": {
-    "lodash@4.17.20":"http://127.0.0.1:8080/dist/lodash@4.17.20.js",
-    "lodash@1.1.1": "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js",
+    "lodash@4.17.20":"https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js",
+    "jquery": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js",
     "com1": "../bundle/bundle.js"
   }
 }
