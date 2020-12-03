@@ -11,7 +11,23 @@
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <script type="systemjs-importmap" src="./importmap.json"></script>
+    <!-- <script type="systemjs-importmap" src="./importmap.json"></script> -->
+    <script>
+      function getMapData() {
+        const xhr = new XMLHttpRequest();
+        // http://127.0.0.1:3000/packages/map.json
+        // http://127.0.0.1:7001/public/packages/map.json
+        xhr.open('GET', 'http://127.0.0.1:7001/public/packages/map.json', false);
+        xhr.send();
+        return JSON.parse(xhr.responseText);
+      }
+      const im = document.createElement('script');
+      im.type = 'systemjs-importmap';
+      im.textContent = JSON.stringify({
+        imports: getMapData()
+      }, null, 2);
+      document.currentScript.after(im);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/named-exports.js"></script>
